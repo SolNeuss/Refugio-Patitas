@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: larger;
+  margin-bottom: 100px;
+  background-color: #ebd7c1;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  grid-area: titulo; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+li {
+  list-style: none; }
+
+nav {
+  background-color: #dbb68f;
+  width: 100%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  grid-area: nav; }
+  nav a:hover {
+    color: black;
+    text-decoration: underline; }
+
+.nav2 {
+  display: none; }
+
+footer {
+  background-color: #202020;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  color: #c3c1c1;
+  text-align: center;
+  grid-area: footer;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center; }
+  footer .fotored {
+    width: 6%; }
+
+h1 {
+  margin: 20px;
+  text-align: center; }
+
+main {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+/* INICIO */
+#intro img {
+  grid-area: imagen;
+  display: block;
+  margin: auto; }
+
+#intro p {
+  padding-left: 50px;
+  grid-area: intro; }
+
+/* INTEGRANTES */
+.item-texto {
+  background-color: rgba(0, 255, 255, 0.267); }
+
+.item-foto {
+  background-color: rgba(8, 71, 71, 0.938); }
+
+#grids-container p {
+  padding-bottom: 10px; }
+
+#grids-container h2 {
+  padding-bottom: 10px; }
+
+#grids-container ol li {
+  padding-bottom: 20px; }
+
+.grids-item-uno,
+.grids-item-cuatro {
+  border-radius: 5%;
+  padding: 3%;
+  overflow: visible;
+  transition: all 1s; }
+
+.grids-item-uno {
+  grid-area: texto1; }
+
+.grids-item-cuatro {
+  margin-top: 30px;
+  grid-area: texto2; }
+
+.grids-item-dos,
+.grids-item-tres {
+  margin: auto;
+  padding: 2%;
+  border-radius: 5%;
+  overflow: visible;
+  transition: all 1s; }
+
+.grids-item-dos img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3%;
+  grid-area: img1; }
+
+.grids-item-tres img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3%;
+  grid-area: img2; }
+
+.grids-item-uno:hover, .grids-item-dos:hover, .grids-item-tres:hover, .grids-item-cuatro:hover {
+  transform: scale(0.9); }
+
+/* ADOPCIONES */
+.animal {
+  height: 80%;
+  width: 27%;
+  height: auto;
+  background-color: #00000024;
+  box-shadow: 0 10px 90px #00000024;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+  transition: all 1s;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 30px;
+  position: relative; }
+  .animal:hover {
+    transform: scale(1.1); }
+  .animal .animal-header .profile-img {
+    width: 260px;
+    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    position: relative; }
+
+.btn, #Contacto .forms #submit,
+#Contacto .forms #reset {
+  background-color: #f18e55;
+  margin: 15px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 17px; }
+  .btn:hover, #Contacto .forms #submit:hover,
+  #Contacto .forms #reset:hover {
+    background-color: #f34b18; }
+    .btn:hover a, #Contacto .forms #submit:hover a, #Contacto .forms #reset:hover a {
+      color: black; }
+
+/* EVENTOS */
+.item-media img {
+  width: 100%;
+  height: 150%;
+  object-fit: cover; }
+
+#contenedor-media .imag7 {
+  grid-area: imag7; }
+
+#contenedor-media .imag6 {
+  grid-area: imag6; }
+
+#contenedor-media .imag5 {
+  grid-area: imag5; }
+
+#contenedor-media .imag4 {
+  height: 79.7%;
+  grid-area: imag4; }
+
+#contenedor-media .imag3 {
+  grid-area: imag3; }
+
+#contenedor-media .imag2 {
+  grid-area: imag2; }
+
+#contenedor-media .imag1 {
+  grid-area: imag1; }
+
+/* CONTACTO */
+#Contacto {
+  background-image: url("../media/huesitos.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover; }
+  #Contacto .forms {
+    grid-area: forms; }
+    #Contacto .forms input[type="text"],
+    #Contacto .forms [type="email"],
+    #Contacto .forms select,
+    #Contacto .forms textarea {
+      width: 100%;
+      display: block;
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      background-color: #f0e1d1;
+      font-size: 15px;
+      text-transform: uppercase; }
+    #Contacto .forms #submit,
+    #Contacto .forms #reset {
+      margin-left: 5px;
+      color: white; }
+  #Contacto #contactos {
+    grid-area: contacto; }
+    #Contacto #contactos p {
+      display: inline-block;
+      margin-left: 10px;
+      padding-bottom: 50px; }
+    #Contacto #contactos img {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle; }
+
+#intro {
+  display: grid;
+  grid-area: intro;
+  grid-template-columns: 45% 50%;
+  grid-template-rows: 20px 1fr;
+  grid-column-gap: 10px;
+  grid-template-areas: "nav nav" "titulo titulo" "intro imagen" "footer footer"; }
+
+#grids-container {
+  margin: 0%;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-gap: 5%;
+  grid-template-rows: 6% 40% 45%;
+  margin: auto;
+  justify-content: center;
+  grid-template-areas: "titulo titulo" "texto1 img1" "img2 texto2"; }
+
+#contenedor-media {
+  width: 100%;
+  height: 150%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  grid-row-gap: 110px;
+  grid-column-gap: 10px;
+  margin: auto;
+  grid-template-areas: "imag1 imag2 imag3" "imag4 imag5 imag5" "imag4 imag6 imag7"; }
+
+.forms-cont {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: 55% 45%;
+  grid-column-gap: 40px;
+  grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; }
+
+/* TABLET */
+@media screen and (min-width: 700px) and (max-width: 1200px) {
+  /* INICIO */
+  #intro img {
+    grid-area: imagen;
+    display: block;
+    width: 95%;
+    max-width: 650px;
+    margin: auto;
+    padding-top: 20px; }
+  #intro p {
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-area: intro; }
+  #intro {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35px 5px 1fr 300px 30px;
+    grid-template-areas: "nav" "titulo" "intro" "imagen" "footer"; }
+  /* INTEGRANTES */
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 2%;
+    grid-template-rows: 6% 47% 47%;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas: "titulo titulo" "texto1 img1" "img2 texto2"; }
+  .grids-item-cuatro {
+    padding-bottom: 10%; }
+  /* EVENTOS */
+  #contenedor-media {
+    width: 100%;
+    height: 150%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 50% 49%;
+    grid-template-rows: repeat(5, 200px);
+    grid-row-gap: 110px;
+    grid-column-gap: 10px;
+    grid-template-areas: "imag1 imag2" "imag5 imag5" "imag5 imag5" "imag6 imag4" "imag3 imag4"; }
+  .imag7 {
+    display: none; }
+  .imag5 {
+    height: 79.7%; }
+  /* CONTACTO */
+  .forms-cont {
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 55% 45%;
+    grid-template-areas: "titulo titulo" "forms ." "forms contacto" "forms ." "forms ."; } }
+
+@media screen and (max-width: 1000px) {
+  .animal {
+    width: 40%; } }
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  /* INTEGRANTES */
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-gap: 5%;
+    grid-template-rows: 6% 40% 47%;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas: "titulo titulo" "texto1 img1" "img2 texto2"; }
+  /* CONTACTO */
+  .forms-cont {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 50%;
+    grid-template-areas: "titulo" "forms" "contacto"; }
+  #ubicacion,
+  #telefono,
+  #mail {
+    display: block; }
+  #ubicacion {
+    margin-top: 50px; } }
+
+/* MOBIL */
+@media screen and (max-width: 723px) {
+  nav {
+    display: none; }
+  .nav2 {
+    display: initial;
+    position: relative;
+    z-index: 99;
+    background-color: #dbb68f;
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    grid-area: nav; }
+    .nav2 img {
+      width: 40px; }
+  .desplegable {
+    position: absolute;
+    width: 30%;
+    visibility: hidden;
+    opacity: 0; }
+    .desplegable li a {
+      display: list-item;
+      padding: 15px;
+      background-color: #dbb68f;
+      border: dotted #f08e25; }
+  .nav2 li:hover .desplegable {
+    visibility: visible;
+    opacity: 1; }
+  /* INICIO */
+  #intro {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 35px 5px 1fr 300px 30px;
+    grid-template-areas: "nav" "titulo" "intro" "imagen" "footer"; }
+    #intro p {
+      padding-left: 50px;
+      padding-right: 50px;
+      grid-area: intro; }
+    #intro img {
+      grid-area: imagen;
+      display: block;
+      width: 90%;
+      max-width: 650px;
+      margin: auto;
+      padding-top: 20px; }
+  /* INTEGRANTES */
+  #grids-container {
+    margin: 0%;
+    display: grid;
+    grid-template-columns: 95%;
+    grid-gap: 3%;
+    grid-template-rows: 2% 25% auto 30% auto;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas: "titulo" "texto1" "img1" "texto2" "img2"; }
+  .grids-item-cuatro {
+    padding-bottom: 30px; }
+  .animal {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px; }
+  /* EVENTOS */
+  #contenedor-media {
+    width: 100%;
+    height: 150%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(8, 200px);
+    grid-row-gap: 110px;
+    grid-column-gap: 10px;
+    grid-template-areas: "imag1" "imag2" "imag3" "imag4" "imag4" "imag5" "imag6" "imag7"; }
+  /* CONTACTO */
+  .forms-cont {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 70%;
+    grid-template-areas: "titulo" "forms" "contacto"; }
+  #submit,
+  #reset {
+    background-color: #f18e55;
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; }
+  #contactos p {
+    display: inline-block;
+    margin-left: 0px;
+    padding-bottom: 50px; }
+  #contactos img {
+    height: 100%;
+    margin-left: 0px;
+    display: inline-block;
+    vertical-align: middle; } }
+
+@media screen and (max-width: 466px) {
+  .desplegable {
+    width: 80%; }
+  #grids-container {
+    display: grid;
+    grid-template-columns: 90%;
+    grid-gap: 30px;
+    grid-template-rows: 2% 1fr 1fr;
+    margin: auto;
+    justify-content: center;
+    grid-template-areas: "titulo" "texto1" "texto2"; }
+    #grids-container .grids-item-dos,
+    #grids-container .grids-item-tres {
+      display: none; } }

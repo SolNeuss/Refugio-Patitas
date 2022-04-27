@@ -1,0 +1,196 @@
+/* INICIO */
+#intro{
+    img {
+    grid-area: imagen;
+    display: block;
+    margin: auto;
+  }
+  p {
+    padding-left: 50px;
+    grid-area: intro;
+  }
+}
+
+/* INTEGRANTES */
+$fondo:(texto:rgba(0, 255, 255, 0.267), foto:rgba(8, 71, 71, 0.938));
+@each $item, $color in $fondo{
+  .item-#{$item}{
+    background-color: $color;
+  }
+}
+#grids-container{
+  p{
+    padding-bottom: 10px;
+  }
+  h2{
+    padding-bottom: 10px;
+  }
+  ol{
+    li{
+    padding-bottom: 20px;
+   }
+  } 
+
+}
+.grids-item-uno,
+.grids-item-cuatro {
+  border-radius: 5%;
+  padding: 3%;
+  overflow: visible;
+  transition: all 1s;
+}
+.grids-item-uno {
+  grid-area: texto1;
+
+}
+.grids-item-cuatro {
+  margin-top: 30px;
+  grid-area: texto2;
+}
+.grids-item-dos,
+.grids-item-tres {
+  @include sizes (auto, 2%);
+  border-radius: 5%;
+  overflow: visible;
+  transition: all 1s;
+}
+.grids-item-dos {
+  img {
+  height: 100%;
+  width: $width;
+  border-radius: 3%;
+  grid-area: img1;
+  }
+}
+.grids-item-tres{
+  img {
+  height: 100%;
+  width: $width;
+  border-radius: 3%;
+  grid-area: img2;
+  }
+} 
+.grids-item-uno:hover, .grids-item-dos:hover, .grids-item-tres:hover, .grids-item-cuatro:hover{
+  transform: scale(0.9);
+}
+
+/* ADOPCIONES */
+.animal {
+  height: 80%;
+  width: 27%;
+  height: auto;
+  background-color: #00000024;
+  box-shadow: 0 10px 90px #00000024;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+  transition: all 1s;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin:30px;
+  position: relative;
+  &:hover{
+    transform: scale(1.1);  
+    } 
+  .animal-header .profile-img {
+    width: 260px;
+    height: 200px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    position: relative;
+  }
+  
+}
+
+.btn {
+    background-color: #f18e55;
+    @include sizes (15px,12px 20px);
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    &:hover{
+      background-color: #f34b18;
+      a{
+        color: black;
+      }
+    }
+  }
+/* EVENTOS */
+
+.item-media{
+  img {
+  width:$width;
+  height: 150%;
+  object-fit: cover;
+  }
+}
+#contenedor-media{
+  .imag7 {
+  grid-area: imag7;
+  }
+  .imag6 {
+  grid-area: imag6;
+  }
+  .imag5 {
+  grid-area: imag5;
+  }
+  .imag4 {
+  height: 79.7%;
+  grid-area: imag4;
+  }
+  .imag3 {
+  grid-area: imag3;
+  }
+  .imag2 {
+  grid-area: imag2;
+  }
+  .imag1 {
+  grid-area: imag1;
+  }
+} 
+
+/* CONTACTO */
+#Contacto {
+  background-image: url("../media/huesitos.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  .forms {
+    grid-area: forms;
+    input[type="text"],
+    [type="email"],
+    select,
+    textarea {
+      width: 100%;
+      display: block;
+      padding: 5px;
+      border: 1px solid black;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      background-color: #f0e1d1;
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    #submit,
+    #reset {
+      @extend .btn;
+      margin-left: 5px;  
+      color: white;
+    }
+  }
+  #contactos {
+    grid-area: contacto;
+    p {
+      display: inline-block;
+      margin-left: 10px;
+      padding-bottom: 50px;
+    }
+    img {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
